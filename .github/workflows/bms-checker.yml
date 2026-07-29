@@ -2,8 +2,8 @@ name: BMS Ticket Checker
 
 on:
   schedule:
-    # Every 30 minutes
-    - cron: '*/30 * * * *'
+    # Every 5 minutes
+    - cron: '*/5 * * * *'
   workflow_dispatch:  # Manual trigger button
 
 jobs:
@@ -35,7 +35,6 @@ jobs:
           BMS_THEATRE: ${{ vars.BMS_THEATRE }}
           BMS_TIME: ${{ vars.BMS_TIME }}
         run: uv run main.py
-        # resync
 
       - name: Commit updated state
         run: |
