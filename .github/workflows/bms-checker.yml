@@ -35,6 +35,7 @@ jobs:
           BMS_THEATRE: ${{ vars.BMS_THEATRE }}
           BMS_TIME: ${{ vars.BMS_TIME }}
         run: uv run main.py
+        # resync
 
       - name: Commit updated state
         run: |
